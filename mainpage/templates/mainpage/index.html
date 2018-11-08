@@ -1,0 +1,22 @@
+{% extends 'hellopage/wrapper.html' %}
+
+{% block content %}
+<div class="jumbotron">
+  <div class="container">
+<p>Welcome back</p>
+<p>
+  {% for v in value %}
+    {{v}}
+  {% endfor %}
+<p/>
+</div>
+</div>
+<div class="container">
+  <div class="center-block">
+  Форма здесь
+  {% include "mainpage/form.html" %}
+  {{msg}}
+  <a href="upload/">up</a>
+</div>
+</div>
+{% endblock %}

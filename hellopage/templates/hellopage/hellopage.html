@@ -1,0 +1,24 @@
+{% extends "hellopage/wrapper.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="jumbotron">
+  <div class="content">
+    Welcome in App
+    <a  href="mainpage/" class="btn btn-info">To the main page &raquo;</a>
+  </div>
+</div>
+<img src="{% static 'hellopage/images/80.jpg' %}"  class="img-thumbnail">
+{% endblock %}
+{% block doub_bl %}
+<div class="jumbotron">
+  <div class="container">
+<p>Welcome back</p>
+<p>
+  {% for v in value %}
+    {{v}}
+  {% endfor %}
+<p/>
+</div>
+</div>
+{% endblock %}
